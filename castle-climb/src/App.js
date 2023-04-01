@@ -3,6 +3,7 @@ import { Component, useState } from 'react';
 import React from 'react';
 import DisplayWeps from './components/Weapons.js';
 import PropTypes from 'prop-types';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
 

@@ -1,4 +1,5 @@
 import { Component, useState } from 'react';
+import { Col, Row, Button, Image, Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import "../App.css";
 import Sword from "../images/PlaceSword.jpg";
@@ -63,39 +64,41 @@ function Weap(props) {
   }
 
   const imageStyle = {
-    resizeMode: 'cover',
-    width: '90%',
-    height: '90%'
+    //resizeMode: 'cover',
+    //width: '90%',
+    //height: '90%'
   }
 
   return (
-    <div onClick={handleClick}>
+    <Container onClick={handleClick}>
       {active ? (
-        <div className="weap">
-          <ul className="weapInfo">
-            <li>{props.weap.id}</li>
-            <li>{props.weap.name}</li>
-            <li>Value: {props.weap.value}</li>
-          </ul>
-          <div>
+        <Row className="weap">
+          <Col xs={12} sm={6} md={2}>
+            <ul className="weapInfo">
+              <li>{props.weap.id}</li>
+              <li>{props.weap.name}</li>
+              <li>Value: {props.weap.value}</li>
+            </ul>
+          </Col>
+          <Col xs={12} sm={6} md={2}>
             <p>{props.weap.description}</p>
-          </div>
-        </div>
+          </Col>
+        </Row>
       ) : (
-        <div className="weapShow">
-
-          <img src={props.weap.img} style={imageStyle} className="weapImg"></img>
-          <div className="weapImgInfo">
-            <p>{props.weap.name}</p>
-            <p>Value: {props.weap.value}</p>
-          </div>
-          <div className="weapMint">
-            <button  onClick={(e) => propogate(e)} >Mint This Sword!</button>
-          </div>
-
-        </div>
+          <Row>
+            <Col xs={2} sm={2} md={2}>
+              <Image src={props.weap.img} fluid />
+            </Col>
+            <Col xs={2} sm={2} md={2}>
+              <p>{props.weap.name}</p>
+              <p>Value: {props.weap.value}</p>
+            </Col>
+            <Col xs={2} sm={2} md={2}>
+              <Button>Mint This Sword!</Button>
+            </Col>
+          </Row>
       )}
-    </div>
+    </Container>
   );
 }
 
