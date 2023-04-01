@@ -18,16 +18,15 @@ li {
   grid-column: 3;
 }
 .weapMint button {
-  height: 75%;
+  height: 60%;
 }
 
 .weapImg {
-  margin-top: -15%;
+  margin-top: -10%;
   grid-column: 1;
   margin-left: 15%;
-  object-fit: cover;
   position: relative;
-  transform: rotate(45deg);
+  transform: rotate(38deg);
 }
 .weapImgInfo {
   grid-column: 2;

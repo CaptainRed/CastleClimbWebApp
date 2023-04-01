@@ -62,6 +62,12 @@ function Weap(props) {
     e.stopPropagation();
   }
 
+  const imageStyle = {
+    resizeMode: 'cover',
+    width: '90%',
+    height: '90%'
+  }
+
   return (
     <div onClick={handleClick}>
       {active ? (
@@ -78,7 +84,7 @@ function Weap(props) {
       ) : (
         <div className="weapShow">
 
-          <img src={props.weap.img} className="weapImg"></img>
+          <img src={props.weap.img} style={imageStyle} className="weapImg"></img>
           <div className="weapImgInfo">
             <p>{props.weap.name}</p>
             <p>Value: {props.weap.value}</p>
