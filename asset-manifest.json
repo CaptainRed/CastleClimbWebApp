@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/CastleClimbWebApp/static/css/main.584fddb2.css",
+    "main.js": "/CastleClimbWebApp/static/js/main.ec128520.js",
+    "static/js/787.d12453d9.chunk.js": "/CastleClimbWebApp/static/js/787.d12453d9.chunk.js",
+    "static/media/HeavySword_Paint.png": "/CastleClimbWebApp/static/media/HeavySword_Paint.8bd6ec63aaf249e943ac.png",
+    "static/media/FireKnightSword_Paint.png": "/CastleClimbWebApp/static/media/FireKnightSword_Paint.adb86055d206a7653f3d.png",
+    "static/media/PlaceSword.jpg": "/CastleClimbWebApp/static/media/PlaceSword.0cb322f7e4b08be6aac9.jpg",
+    "static/media/MercenarySword1_Paint.png": "/CastleClimbWebApp/static/media/MercenarySword1_Paint.aafc8502fb19a09e10f6.png",
+    "static/media/BroadSword.png": "/CastleClimbWebApp/static/media/BroadSword.3d6c8931c6b8bd2c7991.png",
+    "index.html": "/CastleClimbWebApp/index.html",
+    "main.584fddb2.css.map": "/CastleClimbWebApp/static/css/main.584fddb2.css.map",
+    "main.ec128520.js.map": "/CastleClimbWebApp/static/js/main.ec128520.js.map",
+    "787.d12453d9.chunk.js.map": "/CastleClimbWebApp/static/js/787.d12453d9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.584fddb2.css",
+    "static/js/main.ec128520.js"
+  ]
+}
