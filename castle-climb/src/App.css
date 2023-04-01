@@ -25,6 +25,7 @@ li {
   margin-top: -15%;
   grid-column: 1;
   margin-left: 15%;
+  object-fit: cover;
   position: relative;
   transform: rotate(45deg);
 }
