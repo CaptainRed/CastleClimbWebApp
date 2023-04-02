@@ -70,7 +70,7 @@ function Weap(props) {
   }
 
   return (
-    <Container onClick={handleClick}>
+    <Container onClick={handleClick} className="weapSection">
       {active ? (
         <Row className="weap">
           <Col xs={3} sm={3} md={3}>
@@ -85,7 +85,7 @@ function Weap(props) {
           </Col>
         </Row>
       ) : (
-          <Row>
+          <Row className="weap">
             <Col xs={3} sm={3} md={3}>
               <Image src={props.weap.img} fluid />
             </Col>
