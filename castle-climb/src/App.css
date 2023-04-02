@@ -4,6 +4,18 @@
   grid-template-columns: 1.25fr 5fr;*/
 }
 
+@media (max-width: 767px) {
+  h1 {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+
 li {
   list-style-type: none;
 }
