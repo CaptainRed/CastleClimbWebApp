@@ -5,13 +5,13 @@
 }
 
 @media (max-width: 767px) {
-  .h1 {
+  h2 {
     font-size: 8px;
   }
 }
 
 @media (min-width: 768px) {
-  .h1 {
+  h2 {
     font-size: 18px;
   }
 }
