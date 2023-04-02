@@ -1,17 +1,22 @@
 .App {
-  display: grid;
+  /*display: grid;
   grid-column-gap: 1rem;
-  grid-template-columns: 1.25fr 5fr;
+  grid-template-columns: 1.25fr 5fr;*/
 }
 
 li {
   list-style-type: none;
 }
 
+h1 {
+  font-size: 2vw;
+}
+
 .charSection {
-  grid-column: 1;
+
+  /*grid-column: 1;
   padding: 1px;
-  margin: 0%;
+  margin: 0%;*/
 }
 
 .weapMint {
@@ -34,6 +39,7 @@ li {
 }
 
 .weapSection {
+
   /*grid-column: 2;
   padding: 0px;
   margin: 0%;*/

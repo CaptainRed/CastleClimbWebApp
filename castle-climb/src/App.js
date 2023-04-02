@@ -1,5 +1,6 @@
 import './App.css';
 import { Component, useState } from 'react';
+import { Col, Row, Button, Image, Container } from 'react-bootstrap';
 import React from 'react';
 import DisplayWeps from './components/Weapons.js';
 import PropTypes from 'prop-types';
@@ -8,15 +9,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-    <div className="App">
-      <section className="charSection">
-        <h1>CHARACTERS</h1>
-      </section>
-      <section className="weapSection">
-        <h1>WEAPONS</h1>
-        <DisplayWeps />
-      </section>
-    </div>
+    <Container fluid>
+      <Row className="App" fluid>
+        <Col xs={5} sm={6} md={2} className="charSection">
+          <h1>CHARACTERS</h1>
+        </Col>
+        <Col xs={{span: 7, offset: 1}} sm={{span: 5, offset: 1}} md={{span: 9, offset: 1}} className="weapSection">
+          <h1>WEAPONS</h1>
+          <DisplayWeps />
+        </Col>
+      </Row>
+    </Container>
   );
 
 }

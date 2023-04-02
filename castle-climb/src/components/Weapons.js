@@ -73,28 +73,28 @@ function Weap(props) {
     <Container onClick={handleClick}>
       {active ? (
         <Row className="weap">
-          <Col xs={12} sm={6} md={2}>
+          <Col xs={3} sm={3} md={3}>
             <ul className="weapInfo">
               <li>{props.weap.id}</li>
               <li>{props.weap.name}</li>
               <li>Value: {props.weap.value}</li>
             </ul>
           </Col>
-          <Col xs={12} sm={6} md={2}>
+          <Col xs={3} sm={3} md={3}>
             <p>{props.weap.description}</p>
           </Col>
         </Row>
       ) : (
           <Row>
-            <Col xs={2} sm={2} md={2}>
+            <Col xs={3} sm={3} md={3}>
               <Image src={props.weap.img} fluid />
             </Col>
-            <Col xs={2} sm={2} md={2}>
+            <Col xs={3} sm={3} md={3}>
               <p>{props.weap.name}</p>
               <p>Value: {props.weap.value}</p>
             </Col>
-            <Col xs={2} sm={2} md={2}>
-              <Button>Mint This Sword!</Button>
+            <Col xs={3} sm={3} md={3}>
+              <Button fluid>Mint This Sword!</Button>
             </Col>
           </Row>
       )}
