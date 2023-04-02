@@ -75,12 +75,11 @@ function Weap(props) {
         <Row className="weap">
           <Col xs={3} sm={3} md={3}>
             <ul className="weapInfo">
-              <li>{props.weap.id}</li>
               <li>{props.weap.name}</li>
               <li>Value: {props.weap.value}</li>
             </ul>
           </Col>
-          <Col xs={3} sm={3} md={3}>
+          <Col xs={9} sm={9} md={9}>
             <p>{props.weap.description}</p>
           </Col>
         </Row>
@@ -94,7 +93,7 @@ function Weap(props) {
               <p>Value: {props.weap.value}</p>
             </Col>
             <Col xs={3} sm={3} md={3}>
-              <Button fluid>Mint This Sword!</Button>
+              <Button onClick={(e) => propogate(e)} fluid>Mint This Sword!</Button>
             </Col>
           </Row>
       )}
