@@ -11,11 +11,11 @@ function App() {
   return (
     <Container fluid>
       <Row className="App" fluid>
-        <Col xs={5} sm={4} md={2} className="charSection">
-          <h1>CHARACTERS</h1>
+        <Col xs={5} sm={6} md={3} className="charSection">
+          <h1 className="h1">CHARACTERS</h1>
         </Col>
-        <Col xs={7} sm={8} md={10} className="weapSection">
-          <h1>WEAPONS</h1>
+        <Col xs={7} sm={6} md={9} className="weapSection">
+          <h1 className="h1">WEAPONS</h1>
           <DisplayWeps />
         </Col>
       </Row>
