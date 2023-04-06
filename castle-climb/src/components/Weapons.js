@@ -73,13 +73,13 @@ function Weap(props) {
     <Container onClick={handleClick} className="weapSection">
       {active ? (
         <Row className="weap">
-          <Col xs={4} sm={5} md={3} className="weapInfo">
+          <Col xs={5} sm={5} md={3} className="weapInfo">
             <ul>
               <li>{props.weap.name}</li>
               <li>Value: {props.weap.value}</li>
             </ul>
           </Col>
-          <Col xs={10} sm={9} md={9}>
+          <Col xs={10} sm={10} md={9}>
             <p>{props.weap.description}</p>
           </Col>
         </Row>
@@ -93,7 +93,7 @@ function Weap(props) {
               <p>Value: {props.weap.value}</p>
             </Col>
             <Col xs={3} sm={3} md={3}>
-              <Button onClick={(e) => propogate(e)} fluid>Mint This Sword!</Button>
+              <Button onClick={(e) => propogate(e)} variant="secondary" style={{height: '8rem'}} fluid>Mint This Sword!</Button>
             </Col>
           </Row>
       )}
