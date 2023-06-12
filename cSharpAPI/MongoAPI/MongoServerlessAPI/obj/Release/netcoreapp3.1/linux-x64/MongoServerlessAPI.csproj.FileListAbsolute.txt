@@ -1,0 +1,17 @@
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.deps.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.runtimeconfig.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.runtimeconfig.dev.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Core.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.csproj.AssemblyReference.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.AssemblyInfoInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.AssemblyInfo.cs
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.csproj.CoreCompileInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.csproj.CopyComplete
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\MongoServerlessAPI\obj\Release\netcoreapp3.1\linux-x64\MongoServerlessAPI.genruntimeconfig.cache

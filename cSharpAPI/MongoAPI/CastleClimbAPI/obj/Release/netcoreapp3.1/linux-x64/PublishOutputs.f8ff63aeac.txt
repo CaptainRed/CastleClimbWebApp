@@ -1,0 +1,7 @@
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\CastleClimbAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\CastleClimbAPI.deps.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\CastleClimbAPI.runtimeconfig.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\CastleClimbAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Core.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\publish\Amazon.Lambda.Serialization.SystemTextJson.dll

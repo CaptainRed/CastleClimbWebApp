@@ -1,0 +1,17 @@
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.deps.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.runtimeconfig.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.runtimeconfig.dev.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Core.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\bin\Release\netcoreapp3.1\linux-x64\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.csproj.AssemblyReference.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.AssemblyInfoInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.AssemblyInfo.cs
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.csproj.CoreCompileInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.csproj.CopyComplete
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\CastleClimbAPI\obj\Release\netcoreapp3.1\linux-x64\CastleClimbAPI.genruntimeconfig.cache

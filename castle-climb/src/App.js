@@ -9,8 +9,17 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   return (
-    <Container className="App" fluid>
-      <Row fluid>
+    <Container className="App" fluid="true">
+      <Row className='gx-0'>
+      <nav>
+        <ul>
+          <li className="leftItems"><a>Home</a></li>
+          <li className="rightItems"><a>Login</a></li>
+
+        </ul>
+      </nav>
+      </Row>
+      <Row className='gx-0'>
         <Col xs={12} sm={6} md={3} className="charSection">
           <h2>CHARACTERS</h2>
         </Col>

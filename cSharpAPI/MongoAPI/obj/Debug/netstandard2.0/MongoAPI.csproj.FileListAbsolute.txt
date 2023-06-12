@@ -1,0 +1,13 @@
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\bin\Debug\netstandard2.0\MongoAPI.deps.json
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\bin\Debug\netstandard2.0\MongoAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\bin\Debug\netstandard2.0\MongoAPI.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\bin\Debug\netstandard2.0\MongoDataAccess.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\bin\Debug\netstandard2.0\MongoDataAccess.pdb
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.csproj.AssemblyReference.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.AssemblyInfoInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.AssemblyInfo.cs
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.csproj.CoreCompileInputs.cache
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.csproj.CopyComplete
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.dll
+C:\Users\sdavi\Documents\_AlecApp\cSharpAPI\MongoAPI\obj\Debug\netstandard2.0\MongoAPI.pdb

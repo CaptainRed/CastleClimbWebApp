@@ -4,12 +4,12 @@
   grid-template-columns: 1.25fr 5fr;*/
   background-image: url('images/BackgroundTest2.png');
   color: white;
+  max-width: 100%;
 }
 
 h2 {
   color: white;
 }
-
 
 
 @media (max-width: 767px) {
@@ -22,6 +22,28 @@ h2 {
   }
 
 
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0%;
+  padding: 0%;
+  overflow: hidden;
+  background-color: #7a81a3;
+  /*border-bottom: 1px solid black;
+  background-color: #f4f4f4;*/
+}
+nav li {
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.leftItems {
+  float: left;
+}
+
+.rightItems {
+  float: right;
 }
 
 p {

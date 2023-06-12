@@ -1,4 +1,4 @@
-import { Component, useState } from 'react';
+import React, { Component, useState, useEffect } from 'react';
 import { Col, Row, Button, Image, Container } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import "../App.css";
@@ -7,7 +7,7 @@ import BroadSword from "../images/BroadSword.png";
 import FireSword from "../images/FireKnightSword_Paint.png";
 import MercSword from "../images/MercenarySword1_Paint.png";
 import HeavySword from "../images/HeavySword_Paint.png";
-
+/*
 function DisplayWeps ()
 {
   const [weaps, changeWeap] = useState([
@@ -41,12 +41,22 @@ function DisplayWeps ()
     }
   ]);
 
+  fetch('https://jzzqcco32qkzdbfd5c6rd7b2im0dczyg.lambda-url.us-west-2.on.aws/')
+    .then(response => response.json())
+    .then(data => {
+
+    })
+    .catch(error => {
+
+    });
+
   return weaps.map((weapon) => (
     <Weap weap={weapon}/>
   ));
 }
-
-function Weap(props) {
+*/
+// Weap...
+function DisplayWeps() {
 
   const [active, setActive] = useState(false);
 
@@ -54,14 +64,29 @@ function Weap(props) {
     setActive(!active);
   }
 
-  /*const weapDisplay = {
-    backgroundImage: props.weap.img,
-    backgroundSize: 'cover'
-  }*/
-
   function propogate(e) {
     e.stopPropagation();
   }
+
+  const [weapons, setWeapons] = useState([]);
+
+  useEffect(() => {
+    fetch('https://enajp2fi7mnebzf6tmu7tkbnj40lbijl.lambda-url.us-west-2.on.aws/')
+      .then(response => response.json())
+      .then(data => {
+        const weapons: Weapon[] = data.map((weapon: any) => {
+          return {
+            id: weapon.Id,
+            name: weapon.Name,
+            desc: weapon.Desc
+          }
+        });
+        setWeapons(data)
+      })
+      .catch(error => console.error(error));
+  }, []);
+
+  //onsole.log(weapons[0].name);
 
   const imageStyle = {
     //resizeMode: 'cover',
@@ -70,6 +95,17 @@ function Weap(props) {
   }
 
   return (
+    <Container className="weapSection">
+      {weapons.map(weapon => (
+        <div key={weapon.Id}>
+          <h2>{weapon.Name}</h2>
+          <p>{weapon.Desc}</p>
+        </div>
+      ))}
+    </Container>
+  )
+
+  /*return (
     <Container onClick={handleClick} className="weapSection">
       {active ? (
         <Row className="weap">
@@ -80,7 +116,7 @@ function Weap(props) {
             </ul>
           </Col>
           <Col xs={10} sm={10} md={9}>
-            <p>{props.weap.description}</p>
+            <p>{props.weap.escription}</p>
           </Col>
         </Row>
       ) : (
@@ -98,7 +134,7 @@ function Weap(props) {
           </Row>
       )}
     </Container>
-  );
+  );*/
 }
 
 export default DisplayWeps;
