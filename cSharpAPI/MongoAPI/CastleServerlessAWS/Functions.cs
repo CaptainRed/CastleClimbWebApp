@@ -47,7 +47,7 @@ public class Functions
             StatusCode = (int)HttpStatusCode.OK,
             Body = JsonSerializer.Serialize(weapons),
             Headers = new Dictionary<string, string> {
-                { "Access-Control-Allow-Origin", "http://localhost:3000/CastleClimbWebApp" },
+                { "Access-Control-Allow-Origin", "*" },
                 { "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
                 { "Access-Control-Allow-Methods", "OPTIONS,POST,GET" },
                 { "Content-Type", "application/json" } }

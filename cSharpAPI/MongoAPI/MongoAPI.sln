@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33627.172
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MongoRestAWS", "..\MongoRestAWS\MongoRestAWS.csproj", "{CCCD1CE1-1B5E-47CA-996A-B1D8B46494FB}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CastleServerlessAWS", "CastleServerlessAWS\CastleServerlessAWS.csproj", "{AC2EF59A-EAA0-4702-AE06-6AFB733F9313}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{CCCD1CE1-1B5E-47CA-996A-B1D8B46494FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CCCD1CE1-1B5E-47CA-996A-B1D8B46494FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CCCD1CE1-1B5E-47CA-996A-B1D8B46494FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AC2EF59A-EAA0-4702-AE06-6AFB733F9313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC2EF59A-EAA0-4702-AE06-6AFB733F9313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC2EF59A-EAA0-4702-AE06-6AFB733F9313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC2EF59A-EAA0-4702-AE06-6AFB733F9313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

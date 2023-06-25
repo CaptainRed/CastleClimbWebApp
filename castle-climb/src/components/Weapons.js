@@ -71,7 +71,7 @@ function DisplayWeps() {
   const [weapons, setWeapons] = useState([]);
 
   useEffect(() => {
-    fetch('https://enajp2fi7mnebzf6tmu7tkbnj40lbijl.lambda-url.us-west-2.on.aws/')
+    fetch('https://enajp2fi7mnebzf6tmu7tkbnj40lbijl.lambda-url.us-west-2.on.aws/Get')
       .then(response => response.json())
       .then(data => {
         const weapons: Weapon[] = data.map((weapon: any) => {
