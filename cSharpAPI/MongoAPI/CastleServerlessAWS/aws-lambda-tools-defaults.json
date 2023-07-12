@@ -14,5 +14,5 @@
     "template-parameters" : "",
     "function-handler"    : "CastleServerlessAWS::CastleServerlessAWS:Functions::Get",
     "s3-bucket"           : "elasticbeanstalk-us-west-2-673708128467",
-    "stack-name"          : "testAlphaaa"
+    "stack-name"          : "testAlphaaa2"
 }

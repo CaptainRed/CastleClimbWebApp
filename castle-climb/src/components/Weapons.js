@@ -70,8 +70,33 @@ function DisplayWeps() {
 
   const [weapons, setWeapons] = useState([]);
 
+  // DELETE singular weapon
+  function deleteEntry(entryID)
+  {
+    console.log(entryID);
+    try
+    {
+        const response = fetch('https://a6ssuwtzchtxo6mjjvlkhyz7ay0ihfrv.lambda-url.us-west-2.on.aws/', {
+          method: 'DELETE',
+          headers: { 'Content-Type' : 'application/json', },
+          body: JSON.stringify({ Id: entryID }),
+        });
+    } catch (error) {
+      console.error("Error Deleting Entry! ", error.message);
+    }
+  }
+
+  const handleDelete = (entryID) => {
+    try {
+      deleteEntry(entryID);
+    } catch (error) {
+      console.error("idk ID not found?", error.message);
+    }
+  };
+
+  // GET all weapons
   useEffect(() => {
-    fetch('https://enajp2fi7mnebzf6tmu7tkbnj40lbijl.lambda-url.us-west-2.on.aws/Get')
+    fetch('https://s7rm46k54v67cmg4qw64akbkom0pdzie.lambda-url.us-west-2.on.aws/')
       .then(response => response.json())
       .then(data => {
         const weapons: Weapon[] = data.map((weapon: any) => {
@@ -100,6 +125,7 @@ function DisplayWeps() {
         <div key={weapon.Id}>
           <h2>{weapon.Name}</h2>
           <p>{weapon.Desc}</p>
+          <Button onClick={() => handleDelete(weapon.Id)}> DELETE </Button>
         </div>
       ))}
     </Container>

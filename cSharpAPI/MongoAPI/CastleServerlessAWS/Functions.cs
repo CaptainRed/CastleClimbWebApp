@@ -55,4 +55,34 @@ public class Functions
 
         return response;
     }
+
+    public async Task<APIGatewayProxyResponse> Delete(APIGatewayProxyRequest request, ILambdaContext context)
+    {
+        context.Logger.LogInformation("Delete Request\n");
+
+        WeaponDataAccess accWeapons = new WeaponDataAccess();
+
+        string weapId = request.QueryStringParameters["Id"];
+
+        WeaponModel temp = new WeaponModel();
+        temp.Id = weapId;
+
+        await accWeapons.DeleteWeapon(temp);
+
+        var response = new APIGatewayProxyResponse
+        {
+            StatusCode = (int)HttpStatusCode.OK,
+            Body = JsonSerializer.Serialize(temp),
+            Headers = new Dictionary<string, string> {
+                //{ "Access-Control-Allow-Origin", "*" },
+                //{ "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
+                //{ "Access-Control-Allow-Methods", "DELETE" },
+                { "Access-Control-Allow-Origin", "*" }, // Allow requests from any origin
+                { "Access-Control-Allow-Methods", "DELETE" }, // Allow only DELETE method
+                { "Access-Control-Allow-Headers", "Content-Type" },
+                { "Content-Type", "application/json" } }
+        };
+
+        return response;
+    }
 }
