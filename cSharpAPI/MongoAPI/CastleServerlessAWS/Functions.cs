@@ -49,7 +49,7 @@ public class Functions
             Headers = new Dictionary<string, string> {
                 { "Access-Control-Allow-Origin", "*" },
                 { "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
-                { "Access-Control-Allow-Methods", "OPTIONS,POST,GET" },
+                { "Access-Control-Allow-Methods", "OPTIONS,GET" },
                 { "Content-Type", "application/json" } }
         };
 
@@ -58,7 +58,7 @@ public class Functions
 
     public async Task<APIGatewayProxyResponse> Delete(APIGatewayProxyRequest request, ILambdaContext context)
     {
-        context.Logger.LogInformation("Delete Request\n");
+        //context.Logger.LogInformation("Delete Request\n");
 
         WeaponDataAccess accWeapons = new WeaponDataAccess();
 
@@ -72,17 +72,80 @@ public class Functions
         var response = new APIGatewayProxyResponse
         {
             StatusCode = (int)HttpStatusCode.OK,
-            Body = JsonSerializer.Serialize(temp),
+            Body = JsonSerializer.Serialize(weapId),
             Headers = new Dictionary<string, string> {
                 //{ "Access-Control-Allow-Origin", "*" },
                 //{ "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
                 //{ "Access-Control-Allow-Methods", "DELETE" },
                 { "Access-Control-Allow-Origin", "*" }, // Allow requests from any origin
                 { "Access-Control-Allow-Methods", "DELETE" }, // Allow only DELETE method
-                { "Access-Control-Allow-Headers", "Content-Type" },
+                { "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
                 { "Content-Type", "application/json" } }
         };
 
         return response;
+    }
+
+    public async Task<APIGatewayProxyResponse> Post(APIGatewayProxyRequest request, ILambdaContext context)
+    {
+        WeaponDataAccess accWeapons = new WeaponDataAccess();
+
+        LambdaLogger.Log($"Request Body: {request.Body}");
+
+        if (string.IsNullOrEmpty(request.Body))
+        {
+            return new APIGatewayProxyResponse
+            {
+                StatusCode = (int)HttpStatusCode.BadRequest,
+                Body = "Request body is missing or empty.",
+                Headers = new Dictionary<string, string>
+            {
+                { "Content-Type", "text/plain" }
+            }
+            };
+        }
+
+        var requestBodyJson = JsonSerializer.Deserialize<JsonElement>(request.Body);
+
+        if (!requestBodyJson.TryGetProperty("Name", out var nameProperty) ||
+            !requestBodyJson.TryGetProperty("Description", out var descriptionProperty))
+        {
+            return new APIGatewayProxyResponse
+            {
+                StatusCode = (int)HttpStatusCode.BadRequest,
+                Body = "Invalid JSON data. Required fields 'Name' and 'Description' are missing.",
+                Headers = new Dictionary<string, string>
+                {
+                    { "Content-Type", "text/plain" }
+                }
+            };
+        }
+
+        var name = nameProperty.GetString();
+        var description = descriptionProperty.GetString();
+
+        WeaponModel newWeapon = new WeaponModel();
+        newWeapon.Name = name;
+        newWeapon.Desc = description;
+
+        /*WeaponModel newWeapon = new WeaponModel();
+        newWeapon.Name = request.QueryStringParameters["Name"];
+        newWeapon.Desc = request.QueryStringParameters["Description"];*/
+
+        await accWeapons.CreateWeapon(newWeapon);
+
+        var response = new APIGatewayProxyResponse
+        {
+            StatusCode = (int)HttpStatusCode.OK,
+            Body = JsonSerializer.Serialize(newWeapon),
+            Headers = new Dictionary<string, string> {
+                { "Access-Control-Allow-Origin", "*" }, // Allow requests from any origin
+                { "Access-Control-Allow-Methods", "OPTIONS,POST" }, // Allow only DELETE method
+                { "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
+                { "Content-Type", "application/json" } }
+        };
+
+        return response;
+
     }
 }
