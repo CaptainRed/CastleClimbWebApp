@@ -106,6 +106,7 @@ public class Functions
         }
 
         var requestBodyJson = JsonSerializer.Deserialize<JsonElement>(request.Body);
+        LambdaLogger.Log($"Request Body: {requestBodyJson}");
 
         if (!requestBodyJson.TryGetProperty("Name", out var nameProperty) ||
             !requestBodyJson.TryGetProperty("Description", out var descriptionProperty))

@@ -75,7 +75,7 @@ function DisplayWeps() {
   return (
     <Container className="weapSection">
       {weapons.map(weapon => (
-        <div key={weapon.Id}>
+        <div className="weap" key={weapon.Id}>
           <h2>{weapon.Name}</h2>
           <p>{weapon.Desc}</p>
           <Button onClick={() => handleDelete(weapon.Id)}> DELETE </Button>

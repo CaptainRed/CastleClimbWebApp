@@ -20,7 +20,10 @@ h2 {
     width: 100%;
     height: auto;
   }
-
+  .collapsible {
+    width: 100%;
+    height: auto;
+  }
 
 }
 
@@ -57,6 +60,10 @@ p {
   .weap {
     width: 70%;
     height: 11rem;
+  }
+  .collapsible {
+    width: 70%;
+    height: 10rem;
   }
 }
 
@@ -111,7 +118,10 @@ h1 {
 }
 
 .weap {
-  display: flex;
+  /*display: flex;*/
+  display: grid;
+  grid-column-gap: 0.5fr;
+  grid-template-columns: 35% 45% 20%;
   align-items: center;
   border: 3px #9398b5 solid;
   margin-bottom: 2rem;
@@ -129,6 +139,7 @@ h1 {
 
 .weap Button {
   background-color: #79A35C;
+  height: 50%
 }
 
 .weapShow {
@@ -143,6 +154,17 @@ h1 {
   height: 75px;
   border: 1px black solid;
   margin: 1%;*/
+}
+
+.collapsible .content {
+    padding: 6px;
+    background-color: #7a81a3;
+}
+.collapsible .header {
+    background-color: #585f82;
+    padding: 6px;
+    cursor: pointer;
+    height: 30%;
 }
 
 Image {

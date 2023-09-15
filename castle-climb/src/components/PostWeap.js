@@ -1,11 +1,13 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Col, Row, Button, Image, Container } from 'react-bootstrap';
+import {useCollapse} from 'react-collapsed';
 import PropTypes from 'prop-types';
 import "../App.css";
 
 function PostWeaps()
 {
-
+  const { getCollapseProps, getToggleProps } = useCollapse();
+  const [isExpanded, setExpanded] = useState(false);
 
   // create weap section
   // Name, desc, submit
@@ -23,62 +25,67 @@ function PostWeaps()
 
   const handleClick = async () => {
     try {
-      await handlePost(name, desc);
+      await postEntry(name, desc);
     } catch (error) {
       console.error("Please", error.message);
     }
-
   }
 
-  async function postEntry(entryName, desc) {
-    const postData = {
-      Name: entryName,
-      Description: desc,
-    };
-    console.log(JSON.stringify(postData));
-    try {
-      const response = await fetch(`https://owezknebkxhyd2vsxkncvq7rbq0ijtwi.lambda-url.us-west-2.on.aws/`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(postData), // Do not wrap postData in an object
-      });
+  function handleCollapse() {
+    setExpanded(!isExpanded);
+  }
 
-      if (!response.ok) {
-        throw new Error(`HTTP error! Status: ${response.status}`);
-      }
 
-      const data = await response.json();
-      console.log('Response data:', data);
-    } catch (error) {
-      console.error('Error Posting Entry!', error.message);
-    }
-}
-
-  const handlePost = async (Name, Desc) => {
-    try {
-      await postEntry(Name, Desc);
-    } catch (error) {
-      console.error("idk ID not found?", error.message);
-    }
+  async function postEntry(entryName, entryDesc) {
+  const postData = {
+    Name: entryName,
+    Description: entryDesc,
   };
+
+  //console.log(JSON.stringify(postData));
+
+  try {
+    console.log("fetching...");
+    const response = await fetch(`https://owezknebkxhyd2vsxkncvq7rbq0ijtwi.lambda-url.us-west-2.on.aws/`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(postData),
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log('Response data:', data);
+  } catch (error) {
+    console.error('Error Posting Entry!', error.message);
+  }
+}
 
 
   return (
-
-    <form>
-      Weapon Name:<input
-        type="text"
-        id="name"
-        name="name"
-        onChange={handleName}
-        value={name}></input>
-      Weapon Description:<input type="text"
-        id="desc"
-        name="desc"
-        onChange={handleDesc}
-        value={desc}></input>
-      <Button onClick={handleClick}>SUBMIT</Button>
-    </form>
+    <div className="collapsible">
+      <div className="header" {...getToggleProps({onClick: handleCollapse})}>
+        {isExpanded ? 'CLOSE' : 'ADD WEAPON'}
+        </div>
+        <div {...getCollapseProps()}>
+          <form className="content">
+            Weapon Name:<input
+              type="text"
+              id="name"
+              name="name"
+              onChange={handleName}
+              value={name}></input>
+            Weapon Description:<input type="text"
+              id="desc"
+              name="desc"
+              onChange={handleDesc}
+              value={desc}></input>
+            <Button onClick={handleClick}>SUBMIT</Button>
+          </form>
+        </div>
+    </div>
   )
 }
 
