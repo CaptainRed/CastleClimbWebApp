@@ -37,16 +37,17 @@ function PostWeaps()
 
 
   async function postEntry(entryName, entryDesc) {
+    
   const postData = {
     Name: entryName,
-    Description: entryDesc,
+    Description: entryDesc
   };
 
   //console.log(JSON.stringify(postData));
 
   try {
     console.log("fetching...");
-    const response = await fetch(`https://owezknebkxhyd2vsxkncvq7rbq0ijtwi.lambda-url.us-west-2.on.aws/`, {
+    const response = await fetch(`https://mub7u2c3e6hvt6n2z7eyneremy0kcbxm.lambda-url.us-west-2.on.aws/`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(postData),

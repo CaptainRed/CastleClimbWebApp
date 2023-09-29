@@ -13,8 +13,23 @@ namespace CastleServerlessAWS
 {
     public class Startup
     {
+
+        public void ConfigureServices(IServiceCollection services)
+        {
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsPolicy", builder =>
+                {
+                    builder.AllowAnyOrigin() // You can also specify specific origins here
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+        }
+
         public void Configure(IApplicationBuilder app)
         {
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>
@@ -28,6 +43,8 @@ namespace CastleServerlessAWS
 
 
             );
+            // Use CORS policy
+            app.UseCors("CorsPolicy");
         }
     }
 }

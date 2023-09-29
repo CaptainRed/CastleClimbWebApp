@@ -92,6 +92,7 @@ public class Functions
 
         LambdaLogger.Log($"Request Body: {request.Body}");
 
+        // EMPTY BODY
         if (string.IsNullOrEmpty(request.Body))
         {
             return new APIGatewayProxyResponse
@@ -108,6 +109,7 @@ public class Functions
         var requestBodyJson = JsonSerializer.Deserialize<JsonElement>(request.Body);
         LambdaLogger.Log($"Request Body: {requestBodyJson}");
 
+        // INVALID BODY
         if (!requestBodyJson.TryGetProperty("Name", out var nameProperty) ||
             !requestBodyJson.TryGetProperty("Description", out var descriptionProperty))
         {
@@ -141,7 +143,7 @@ public class Functions
             Body = JsonSerializer.Serialize(newWeapon),
             Headers = new Dictionary<string, string> {
                 { "Access-Control-Allow-Origin", "*" }, // Allow requests from any origin
-                { "Access-Control-Allow-Methods", "OPTIONS,POST" }, // Allow only DELETE method
+                { "Access-Control-Allow-Methods", "OPTIONS,POST" },
                 { "Access-Control-Allow-Headers", "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token" },
                 { "Content-Type", "application/json" } }
         };

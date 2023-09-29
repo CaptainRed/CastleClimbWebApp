@@ -11,10 +11,10 @@ import HeavySword from "../images/HeavySword_Paint.png";
 // Weap...
 function DisplayWeps() {
 
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState([false]);
 
   function handleClick() {
-    setActive(!active);
+    //setActive(!active);
   }
 
   function propogate(e) {
@@ -73,14 +73,28 @@ function DisplayWeps() {
   }
 
   return (
-    <Container className="weapSection">
-      {weapons.map(weapon => (
-        <div className="weap" key={weapon.Id}>
-          <h2>{weapon.Name}</h2>
-          <p>{weapon.Desc}</p>
-          <Button onClick={() => handleDelete(weapon.Id)}> DELETE </Button>
+    <Container onClick={handleClick} className="weapSection">
+        { active ? (
+        <div>
+          {weapons.map(weapon => (
+            <div className="weap" key={weapon.Id}>
+              <h2>{weapon.Name}</h2>
+              <p>{weapon.Desc}</p>
+              <Button onClick={() => handleDelete(weapon.Id)}> DELETE </Button>
+            </div>
+          ))}
         </div>
-      ))}
+        ) : (
+        <div>
+          {weapons.map(weapon => (
+            <div className="weap" key={weapon.Id}>
+              <h2>{weapon.Name}</h2>
+              <p>{weapon.Desc}</p>
+              <Button onClick={() => handleDelete(weapon.Id)}> EDIT </Button>
+            </div>
+          ))}
+        </div>
+        )}
       <PostWeap />
     </Container>
   )
